@@ -1,0 +1,35 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/scripts/res.rpy", line 91, in script
+    $ time_Moscow = api_time("Moscow")
+  File "game/scripts/res.rpy", line 91, in <module>
+    $ time_Moscow = api_time("Moscow")
+  File "game/scripts/res.rpy", line 61, in api_time
+    response = requests.get(url)
+ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/scripts/res.rpy", line 91, in script
+    $ time_Moscow = api_time("Moscow")
+  File "C:\renpy-8.2.1-sdk\renpy\ast.py", line 823, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\renpy-8.2.1-sdk\renpy\python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/scripts/res.rpy", line 91, in <module>
+    $ time_Moscow = api_time("Moscow")
+  File "game/scripts/res.rpy", line 61, in api_time
+    response = requests.get(url)
+  File "lib/python3.9/requests/api.py", line 73, in get
+  File "lib/python3.9/requests/api.py", line 59, in request
+  File "lib/python3.9/requests/sessions.py", line 589, in request
+  File "lib/python3.9/requests/sessions.py", line 703, in send
+  File "lib/python3.9/requests/adapters.py", line 501, in send
+ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+Windows-10-10.0.22631 AMD64
+Ren'Py 8.2.3.24061702
+Miko 1.0
+Sat Aug 24 16:14:08 2024
